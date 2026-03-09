@@ -18,9 +18,9 @@ const Hero = () => {
     >
       <div className="hero-overlay">
         <div className="hero-content">
-          <h1>Premium Dolomite Powder Manufacturer and Global Supplier</h1>
+          <h1>High-Purity Dolomite Powder Manufacturer and Global Supplier</h1>
           <p>
-            Trusted Quality. Consistent Supply. Partner with Excellence.
+            Reliable grades, export-ready packing, and on-time shipments anywhere in the world
           </p>
 
           {/* Button Group */}
