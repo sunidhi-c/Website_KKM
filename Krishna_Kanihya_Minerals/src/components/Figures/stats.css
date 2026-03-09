@@ -1,0 +1,39 @@
+.stats {
+  background-color: #000000;
+  color: white;
+  padding: 80px 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+/* Each stat block */
+.stat-item {
+  flex: 1;
+  min-width: 200px;
+  margin: 20px 0;
+}
+
+/* Blue icon */
+.stat-icon {
+  font-size: 28px;
+  color: #1D4ED8;
+  margin-bottom: 20px;
+}
+
+/* Big number */
+.stat-item h2 {
+  font-size: 48px;
+  margin: 0;
+  font-weight: 700;
+}
+
+/* Label */
+.stat-item p {
+  margin-top: 10px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #9CA3AF;
+}

@@ -1,0 +1,86 @@
+/* ===== VIDEO SECTION ===== */
+.video-section {
+  background-color: #f3f4f6;
+  color: white;
+  padding: clamp(20px, 6%, 100px) clamp(20px, 10%, 120px); /* top/bottom | left/right */
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  flex-wrap: wrap; /* allow wrapping */
+  box-sizing: border-box;
+}
+
+/* Left side */
+.video-container {
+  flex: 1 1 400px; /* grow and shrink, minimum 400px */
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+/* Video */
+.video-player {
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+  border-radius: 20px;
+  display: block;
+}
+
+/* Right side text */
+.video-text {
+  flex: 1 1 400px; /* grow and shrink, minimum 400px */
+  font-size: 18px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  line-height: 1.8;
+  color: #000000;
+}
+
+/* Video title */
+.video-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 36px;
+  font-weight: 800;
+  margin-bottom: 12px;
+  color: #000000;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Laptops / small desktops */
+@media (max-width: 1024px) {
+  .video-section {
+    gap: 40px;
+    padding: 60px 8%;
+  }
+
+  .video-title {
+    font-size: 32px;
+  }
+
+  .video-text {
+    font-size: 16px;
+  }
+
+  .video-player {
+    max-width: 400px;
+  }
+}
+
+/* Tablets / large phones */
+@media (max-width: 768px) {
+  .video-section {
+    flex-direction: column;
+    padding: clamp(30px, 8%, 50px) clamp(20px, 8%, 60px); /* more left/right padding */
+    gap: 30px;
+  }
+}
+
+/* Small mobile phones */
+@media (max-width: 480px) {
+  .video-section {
+    padding: clamp(20px, 10%, 40px) clamp(15px, 10%, 40px); /* prevent edges being too tight */
+    gap: 20px;
+  }
+}

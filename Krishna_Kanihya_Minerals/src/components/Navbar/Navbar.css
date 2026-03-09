@@ -1,0 +1,159 @@
+.navbar{
+    width: 100%;
+    background: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1px 1%;
+    position: relative;   /* IMPORTANT */
+    z-index: 1000;
+}
+
+.logo{
+    width: 100px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.brand{
+    display: flex;
+    align-items: center;
+}
+
+.brand-text-container{
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+}
+
+.brand-main{
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: extra-bold;
+    color: #020617;
+}
+
+.brand-sub{
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: extra-bold;
+    color: #020617;
+}
+
+ul{
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+/* Existing navbar styles ... */
+
+ul li {
+  cursor: pointer;
+  display: inline-block;
+  margin: 8px 18px;
+  color: rgb(0, 0, 0);
+  transition: color 0.3s;
+}
+
+ul li:hover {
+  color: #007bff; /* hover blue */
+}
+
+ul li.active {
+  color: #007bff; /* active blue */
+  font-weight: bold;
+}
+
+/* Quote Button */
+.quote-button {
+  padding: 8px 18px;
+  border-radius: 4px;
+  background-color: #1D4ED8;
+  font-family: 'Inter', sans-serif;
+  font-weight: Medium;
+  font-size: 15px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Hover Effect */
+.quote-button:hover {
+  background-color: #1e40af;
+}
+
+.menu-toggle{
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.mobile-quote{
+    display: none;
+}
+
+.desktop-quote{
+    display: block;
+}
+/* ================= MOBILE ================= */
+
+@media (max-width: 900px){
+
+.navbar{
+    padding: 10px 4%;
+}
+
+/* hamburger */
+
+.menu-toggle{
+    display:block;
+}
+
+/* hide desktop quote */
+
+.desktop-quote{
+    display:none;
+}
+
+/* nav menu */
+
+.nav-links{
+    position: absolute;
+    top: 100%;   /* appears BELOW navbar */
+    left: 0;
+
+    background: white;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+
+    max-height: 0;
+    overflow: hidden;
+
+    transition: max-height 0.4s ease;
+}
+
+/* open menu */
+
+.nav-links.active{
+    max-height:500px;
+}
+
+/* nav items */
+
+.nav-links li{
+    padding:15px 0;
+}
+
+/* mobile quote */
+
+.mobile-quote{
+    display:block;
+    margin:20px auto;
+}
+
+}

@@ -1,0 +1,191 @@
+.products {
+  padding: 80px 10%;
+  background-color: #f3f4f6;
+  text-align: center;
+}
+
+.products-title {
+  font-size: 36px;
+  font-family: 'Inter', sans-serif;
+  font-weight: Bold;
+  margin-bottom: 30px;
+  color: #111827;
+}
+
+/* Make product card horizontal */
+.product-card {
+  display: flex;               /* Flex container */
+  flex-direction: row;         /* Horizontal layout */
+  gap: 2rem;                   /* Space between image and content */
+  background-color: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  align-items: flex-start;     /* Align items to top */
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Image */
+.product-image {
+  width: 50%;
+  height: 500px;
+  border-radius: 20px;
+  object-fit: cover;
+  object-position: 60% 50%;
+}
+
+/* Content */
+.product-content {
+  padding: 25px;
+  text-align: left;
+}
+
+.product-content h3 {
+  font-size: 36px;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  color: #111827;
+}
+
+.product-description {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #6B7280;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+/* Details */
+.product-details {
+  font-size: 13px;
+  font-family: 'Inter', sans-serif;
+  margin-bottom: 20px;
+}
+
+.product-details div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+  color: #374151;
+}
+
+.product-details span:first-child {
+  color: #6B7280;
+}
+
+/* Mesh Box */
+.mesh-box {
+  margin-top: 30px;
+  background-color: #e5e7eb;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-family: 'Inter', sans-serif;
+  margin-bottom: 20px;
+}
+
+
+/* ========== LAPTOP / TABLET (≤ 1024px) ========== */
+@media (max-width: 1024px) {
+  .products {
+    padding: 60px 8%;
+  }
+
+  .product-card {
+    gap: 1.5rem;
+  }
+
+  .product-image {
+    max-width: 400px;
+    height: auto;
+  }
+
+  .product-content h3 {
+    font-size: 28px;
+    margin-top: 30px;
+  }
+
+  .product-description {
+    font-size: 13px;
+  }
+
+  .product-details {
+    font-size: 12px;
+    justify-content: space-between;
+  }
+
+  .mesh-box {
+    font-size: 12px;
+  }
+}
+
+/* ========== TABLET / MOBILE (≤ 768px) ========== */
+@media (max-width: 768px) {
+  .product-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .product-image {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .product-content {
+    padding: 0;
+  }
+
+  .product-content h3 {
+    font-size: 24px;
+    margin-top: 0;
+  }
+
+  .product-description {
+    font-size: 14px;
+  }
+
+  .product-details div {
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .mesh-box {
+    font-size: 12px;
+    text-align: center;
+  }
+}
+
+/* ========== SMALL MOBILE (≤ 480px) ========== */
+@media (max-width: 480px) {
+  .products {
+    padding: 40px 4%;
+  }
+
+  .products-title {
+    font-size: 24px;
+  }
+
+  .product-content h3 {
+    font-size: 20px;
+  }
+
+  .product-description {
+    font-size: 13px;
+  }
+
+  .product-details div {
+    font-size: 12px;
+  }
+
+  .mesh-box {
+    font-size: 11px;
+  }
+}
