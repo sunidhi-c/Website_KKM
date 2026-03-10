@@ -3,7 +3,7 @@ import "./About.css";
 import aboutImage from "../../assets/about.jpg";
 
 import Features from "./features";
-import AboutCTA from "./Buttons";
+import AboutCTA from "./buttons";
 
 const About = () => {
   return (

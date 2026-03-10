@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
-import "./Stats.css";
+import "./stats.css";
 import { FaArrowUpRightDots, FaUsers, FaChartLine, FaHandshake } from "react-icons/fa6";
 
 const StatItem = ({ icon, end, label, suffix }) => {
