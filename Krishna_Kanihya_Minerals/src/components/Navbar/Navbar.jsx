@@ -80,7 +80,7 @@ const Navbar = () => {
                     Home
                 </li>
 
-                <li
+                {/* <li
                     onClick={() => scrollToSection('about-us')}
                     className={activeSection === 'about-us' ? 'active' : ''}
                 >
@@ -99,6 +99,17 @@ const Navbar = () => {
                     className={activeSection === 'gallery' ? 'active' : ''}
                 >
                     Gallery
+                </li> */}
+
+                <li
+                    onClick={() => window.open(
+                        'https://maps.app.goo.gl/AruLz4aG1EdYFcnf8',
+                        '_blank', // opens in new tab
+                        'noopener,noreferrer'
+                    )}
+                    className={activeSection === 'find-us' ? 'active' : ''}
+                >
+                    Find Us
                 </li>
 
                 <li

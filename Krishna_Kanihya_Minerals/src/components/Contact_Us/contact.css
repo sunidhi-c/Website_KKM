@@ -100,6 +100,16 @@
   font-size: 14px;
 }
 
+.location-link {
+  color: #2986ff; /* light grey */
+  cursor: pointer;
+}
+
+.location-link:hover {
+  color: #025ec8; /* optional hover highlight */
+  text-decoration: underline;
+}
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1024px) {
   .contactus-section {

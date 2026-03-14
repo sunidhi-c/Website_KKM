@@ -78,6 +78,20 @@ const ContactUs = () => {
             <h4>Address</h4>
             <p>Kelwa-Amer Road, BAMANTUKDA</p>
             <p>Rajsamand, Rajasthan - 313334, India</p>
+            {/* Location headline as clickable */}
+            <h5
+              className="location-link"
+              onClick={() =>
+                window.open(
+                  "https://maps.app.goo.gl/AruLz4aG1EdYFcnf8",
+                  "_blank",
+                  "noopener,noreferrer"
+                )
+              }
+              style={{ cursor: "pointer" }}
+            >
+              View on Google Maps
+            </h5>
           </div>
 
           <div className="details-section">
