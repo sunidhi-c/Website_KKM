@@ -123,14 +123,15 @@ const Gallery = () => {
                     onClick={() => setSelectedGallery(null)}
                 >
                     <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-                        <span
-                            className="close-btn"
-                            onClick={() => setSelectedGallery(null)}
-                        >
-                            &times;
-                        </span>
-
-                        <h3>{selectedGallery.title}</h3>
+                        <div className="modal-header">
+                            <span
+                                className="close-btn"
+                                onClick={() => setSelectedGallery(null)}
+                            >
+                                &times;
+                            </span>
+                            <h3>{selectedGallery.title}</h3>
+                        </div>
 
                         <div className="gallery">
                             {selectedGallery.gallery.map((img, i) => (
