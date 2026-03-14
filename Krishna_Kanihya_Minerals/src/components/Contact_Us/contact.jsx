@@ -7,26 +7,21 @@ const ContactUs = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const formData = new FormData(e.target);
-
-    const data = {
-      name: formData.get("name"),
-      email: formData.get("email"),
-      requirements: formData.get("requirements")
-    };
+    const form = e.target;
+    // For Netlify Forms to process properly, we send it as URL-encoded data
+    const formData = new FormData(form);
+    // form-name is already included via the hidden input in the form below
 
     try {
-      const response = await fetch("http://localhost:5000/send-email", {
+      const response = await fetch("/", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(data)
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData).toString()
       });
 
       if (response.ok) {
         setStatusMsg("✅ Your request has been submitted!");
-        e.target.reset();
+        form.reset();
       } else {
         setStatusMsg("❌ Failed to send message.");
       }
@@ -40,7 +35,8 @@ const ContactUs = () => {
       <div className="contactus-grid">
 
         {/* Left Column - Contact Form */}
-        <form className="contact-form" onSubmit={handleSubmit}>
+        <form className="contact-form" name="contact" data-netlify="true" onSubmit={handleSubmit}>
+          <input type="hidden" name="form-name" value="contact" />
           <h2>Contact Us</h2>
 
           {/* Name & Email Row */}

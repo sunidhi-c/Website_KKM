@@ -6,6 +6,12 @@
     <title>krishna-kanihya-minerals</title>
   </head>
   <body>
+    <!-- A hidden form for Netlify to parse the fields during build -->
+    <form name="contact" data-netlify="true" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <textarea name="requirements"></textarea>
+    </form>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
